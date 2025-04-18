@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
+using Microsoft.Azure.WebJobs;
 
 namespace Cozmos.Function
 {
@@ -14,7 +15,7 @@ namespace Cozmos.Function
             _logger = loggerFactory.CreateLogger<CozmosdbTrigger>();
         }
 
-        [Function("CozmosdbTrigger")]
+        [FunctionName("CozmosdbTrigger")]
         public void Run([CosmosDBTrigger(
             databaseName: "BookStore",
             containerName: "Documents",
