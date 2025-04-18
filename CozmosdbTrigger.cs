@@ -33,11 +33,8 @@ namespace Cozmos.Function
     public class MyDocument
     {
         public string id { get; set; }
-
-        public string Text { get; set; }
-
-        public int Number { get; set; }
-
-        public bool Boolean { get; set; }
+        public string Description { get; set; }
+        public string Title {  get; set; }
+        public string Documents {  get; set; }
     }
 }
